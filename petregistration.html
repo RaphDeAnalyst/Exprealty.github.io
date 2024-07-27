@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EXPRealty Pet Registration Form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/exp2.png" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">Exp Realty</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="appointment.html" class="nav-item nav-link">Book an Appointment</a>
+                        <a href="application.html" class="nav-item nav-link">Application Form</a>
+                        <a href="pet-registration.html" class="nav-item nav-link active">Pet Registration Form</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                    <h1 class="mb-4">Pet Registration Form</h1>
+                    <p>Please fill out the pet registration form below if you have any pets. Fields marked with * are required.</p>
+                </div>
+                <form id="petRegistrationForm" action="https://formsubmit.co/80dc12283c027029bba3ba2ad36e2263" method="POST" enctype="multipart/form-data" novalidate>
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- Redirect -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/ApplicationSuccess.html">
+
+                    <!-- Subject -->
+                    <input type="hidden" name="_subject" value="Pet Registration">
+
+                    <!-- Template -->
+                    <input type="hidden" name="_template" value="table">
+
+                    <div id="petRegistrationSections">
+                        <div class="pet-section">
+                            <div class="row g-3">
+                                <!-- Pet Information -->
+                                <div class="col-12">
+                                    <h4>Pet Information</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="petType-0" class="form-label">* Type of Pet</label>
+                                    <select name="Type of Pet-0" class="form-select pet-type" id="petType-0" required>
+                                        <option value="">Select</option>
+                                        <option value="Dog">Dog</option>
+                                        <option value="Cat">Cat</option>
+                                        <option value="Bird">Bird</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <input name="Other Pet Type-0" type="text" class="form-control mt-2 otherPetType" id="otherPetType-0" placeholder="Please specify" style="display: none;">
+                                    <div class="invalid-feedback">Please select a type of pet.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="petName-0" class="form-label">* Pet's Name</label>
+                                    <input name="Pet's Name-0" type="text" class="form-control" id="petName-0" required>
+                                    <div class="invalid-feedback">Please enter your pet's name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="petBreed-0" class="form-label">* Pet's Breed</label>
+                                    <input name="Pet's Breed-0" type="text" class="form-control" id="petBreed-0" required>
+                                    <div class="invalid-feedback">Please enter your pet's breed.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="petAge-0" class="form-label">* Pet's Age</label>
+                                    <input name="Pet's Age-0" type="number" class="form-control" id="petAge-0" required>
+                                    <div class="invalid-feedback">Please enter your pet's age.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="petWeight-0" class="form-label">* Pet's Weight</label>
+                                    <input name="Pet's Weight-0" type="number" step="0.1" class="form-control" id="petWeight-0" required>
+                                    <div class="invalid-feedback">Please enter your pet's weight.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="vaccinationStatus-0" class="form-label">* Vaccination Status</label>
+                                    <select name="Vaccination Status-0" class="form-select" id="vaccinationStatus-0" required>
+                                        <option value="">Select</option>
+                                        <option value="up to date">Up to Date</option>
+                                        <option value="not up to date">Not Up to Date</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select the vaccination status.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="vaccinationRecords-0" class="form-label">* Upload Vaccination Records</label>
+                                    <input name="Vaccination Records-0" type="file" class="form-control" id="vaccinationRecords-0" accept=".pdf,.jpg,.png" multiple required>
+                                    <div class="invalid-feedback">Please upload the vaccination records.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="btn btn-secondary w-100 py-3" type="button" id="addPetButton">Add Another Pet</button>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <p>* I declare that the information I have provided is true and correct and contain no misrepresentations. If misrepresentations are found after a residential lease agreement is entered into between the Landlord and Applicant, the Landlord shall have the option to terminate the residential lease agreement and seek all available remedies.</p>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" type="submit">Submit Pet Registration</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Pet Registration Form End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Empire Tower, Business Bay, Dubai, UAE</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="appointment.html">Book an Appointment</a>
+                        <a class="btn btn-link text-white-50" href="application.html">Application Form</a>
+                        <a class="btn btn-link text-white-50" href="pet-registration.html">Pet Registration Form</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Sign up to get our updates and latest news.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-white text-center py-4" style="background: #000;">
+            <p class="m-0">&copy; <a href="#" class="text-white border-bottom">Exp Realty</a>. All Rights Reserved.</p>
+        </div>
+        <!-- Footer End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            let petCount = 1;
+
+            // Add Pet Button Click Event
+            $('#addPetButton').click(function() {
+                const petSection = $('.pet-section').first().clone();
+                petSection.find('input, select').each(function() {
+                    const newId = $(this).attr('id').replace(/\d+/, petCount);
+                    $(this).attr('id', newId).val('');
+                    $(this).attr('name', $(this).attr('name').replace(/\d+/, petCount));
+                });
+                petSection.find('.otherPetType').hide();
+                $('#petRegistrationSections').append(petSection);
+                petCount++;
+            });
+
+            // Show/Hide Other Pet Type Input
+            $(document).on('change', '.pet-type', function() {
+                const otherPetTypeInput = $(this).closest('.pet-section').find('.otherPetType');
+                if ($(this).val() === 'Other') {
+                    otherPetTypeInput.show();
+                    otherPetTypeInput.attr('required', true);
+                } else {
+                    otherPetTypeInput.hide();
+                    otherPetTypeInput.attr('required', false);
+                }
+            });
+
+            // Form validation
+            $('#petRegistrationForm').on('submit', function(event) {
+                const form = this;
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
+</body>
+
+</html>

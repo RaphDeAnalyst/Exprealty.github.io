@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EXPRealty Appointment Form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <h1 class="m-0 text-primary">EXPRealty</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="property-list.html" class="nav-item nav-link">Properties</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="appointment.html" class="nav-item nav-link">Book an Appointment</a>
+                        <a href="signup.html" class="nav-item nav-link">Signup</a>
+                        <a href="login.html" class="nav-item nav-link">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Appointment Form Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                    <h1 class="mb-4">EXPRealty Application Form</h1>
+                    <p>Please fill out the application form below and submit within 24 hours to proceed with your rental processes. Fields marked with * are required.</p>
+                </div>
+                <form>
+                    <div class="row g-3">
+                        <!-- Rental Property Information -->
+                        <div class="col-12">
+                            <h4>Rental Property Information</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="rentalAddress" class="form-label">* Rental property Address</label>
+                            <input type="text" class="form-control" id="rentalAddress" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="leaseTerm" class="form-label">* Type of Lease Term</label>
+                            <input type="text" class="form-control" id="leaseTerm" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="bedrooms" class="form-label">* Number of Bedrooms</label>
+                            <input type="number" class="form-control" id="bedrooms" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="bathrooms" class="form-label">* Number of Bathrooms</label>
+                            <input type="number" class="form-control" id="bathrooms" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="rentAmount" class="form-label">* Rent to be paid</label>
+                            <input type="text" class="form-control" id="rentAmount" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="securityDeposit" class="form-label">* Refundable Security Deposit</label>
+                            <input type="text" class="form-control" id="securityDeposit" required>
+                        </div>
+
+                        <!-- Applicant's Bio-data -->
+                        <div class="col-12">
+                            <h4>Applicant's Bio-data</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="applicantName" class="form-label">* Name</label>
+                            <input type="text" class="form-control" id="applicantName" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="applicantEmail" class="form-label">* Email</label>
+                            <input type="email" class="form-control" id="applicantEmail" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="applicantAddress" class="form-label">* Current Address</label>
+                            <input type="text" class="form-control" id="applicantAddress" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="applicantPhone" class="form-label">* Phone Number</label>
+                            <input type="tel" class="form-control" id="applicantPhone" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="altPhone" class="form-label">Alternative Phone Number</label>
+                            <input type="tel" class="form-control" id="altPhone">
+                        </div>
+                        <div class="col-6">
+                            <label for="dob" class="form-label">* Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="moveInDate" class="form-label">* Desired Move-in Date</label>
+                            <input type="date" class="form-control" id="moveInDate" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="moveOutDate" class="form-label">* Desired Move-out Date</label>
+                            <input type="date" class="form-control" id="moveOutDate" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="maritalStatus" class="form-label">* Marital Status</label>
+                            <input type="text" class="form-control" id="maritalStatus" required>
+                        </div>
+
+                        <!-- Employment Information -->
+                        <div class="col-12">
+                            <h4>Employment Information</h4>
+                        </div>
+                        <div class="col-6">
+                            <label for="employmentStatus" class="form-label">* Employment Status</label>
+                            <input type="text" class="form-control" id="employmentStatus" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="currentEmployer" class="form-label">* Current Employer</label>
+                            <input type="text" class="form-control" id="currentEmployer" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="jobTitle" class="form-label">* Job Title</label>
+                            <input type="text" class="form-control" id="jobTitle" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="supervisorName" class="form-label">* Supervisor's Name</label>
+                            <input type="text" class="form-control" id="supervisorName" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="supervisorPhone" class="form-label">* Supervisor Phone Number</label>
+                            <input type="tel" class="form-control" id="supervisorPhone" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="monthlyIncome" class="form-label">* Monthly Income</label>
+                            <input type="text" class="form-control" id="monthlyIncome" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="otherIncome" class="form-label">Other Sources of Income</label>
+                            <input type="text" class="form-control" id="otherIncome">
+                        </div>
+                        <div class="col-12">
+                            <label for="proofOfIncome" class="form-label">* Proof of Income</label>
+                            <input type="file" class="form-control" id="proofOfIncome" required>
+                            <small class="form-text text-muted">Acceptable documentation includes Pay Stubs, copies of the Previous year’s tax return, Employment Contract, Recent Pay slips, and Bank Statement showing current balance.</small>
+                        </div>
+
+                        <!-- Credit History and Background Check Authorization -->
+                        <div class="col-12">
+                            <h4>Credit History and Background Check Authorization</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="bankruptcy" class="form-label">* Have you declared bankruptcy in the past seven (7) years?</label>
+                            <select class="form-select" id="bankruptcy" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="evicted" class="form-label">* Have you been evicted Before?</label>
+                            <select class="form-select" id="evicted" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="creditComment" class="form-label">Is there anything that we may find in your credit check that you want to comment on?</label>
+                            <textarea class="form-control" id="creditComment"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="criminalCheck" class="form-label">* Do you consent to a criminal check?</label>
+                            <select class="form-select" id="criminalCheck" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="felony" class="form-label">* Have you been convicted of a felony before?</label>
+                            <select class="form-select" id="felony" required>
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="criminalComment" class="form-label">Is there anything that we may find in our criminal check that you want to comment on?</label>
+                            <textarea class="form-control" id="criminalComment"></textarea>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="col-12">
+                            <h4>Additional Information</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="pets" class="form-label">Pets (The Landlord allows pets in the rental property with certain conditions)</label>
+                            <input type="text" class="form-control" id="pets">
+                        </div>
+                        <div class="col-12">
+                            <label for="smoking" class="form-label">* Do you smoke or Drink?</label>
+                            <input type="text" class="form-control" id="smoking" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="nightWork" class="form-label">* Do you Work at Night?</label>
+                            <input type="text" class="form-control" id="nightWork" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="adults" class="form-label">* Number of Adults to occupy the Property</label>
+                            <input type="number" class="form-control" id="adults" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="children" class="form-label">* Number of Children to occupy the Property</label>
+                            <input type="number" class="form-control" id="children" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="car" class="form-label">* Do you have a car?</label>
+                            <input type="text" class="form-control" id="car" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="carDetails" class="form-label">Car model and registration number</label>
+                            <input type="text" class="form-control" id="carDetails">
+                        </div>
+                        <div class="col-12">
+                            <label for="guarantor" class="form-label">* Guarantor name, address and contact</label>
+                            <input type="text" class="form-control" id="guarantor" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="idCard" class="form-label">* ID CARD OR PASSPORT</label>
+                            <input type="file" class="form-control" id="idCard" required>
+                            <small class="form-text text-muted">Identification: Driver’s License, Passport, 18+Card or Copy of Birth Certificate.</small>
+                        </div>
+
+                        <!-- Declaration and Authorization -->
+                        <div class="col-12">
+                            <h4>Declaration and Authorization</h4>
+                        </div>
+                        <div class="col-12">
+                            <p>* I declare that the information I have provided is true and correct and contain no misrepresentations. If misrepresentations are found after a residential lease agreement is entered into between the Landlord and Applicant, the Landlord shall have the option to terminate the residential lease agreement and seek all available remedies.</p>
+                            <p>* I authorize the Landlord to verify all references and facts, including but not limited to employers and personal references.</p>
+                            <p>* I understand that incomplete or incorrect information provided in the application may cause a delay in processing or may result in the denial of the application.</p>
+                            <p>* I agree to be contacted via electronic and/or SMS methods.</p>
+                            <p>* I understand that this agency does not accept bond loans or Benefits programs.</p>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 py-3">Submit Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Appointment Form End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer mt-5 pt-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Company</h5>
+                        <a class="btn btn-link" href="#">About Us</a>
+                        <a class="btn btn-link" href="#">Contact Us</a>
+                        <a class="btn btn-link" href="#">Privacy Policy</a>
+                        <a class="btn btn-link" href="#">Terms & Condition</a>
+                        <a class="btn btn-link" href="#">FAQs & Help</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid bg-light p-1" src="img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link" href="#">About Us</a>
+                        <a class="btn btn-link" href="#">Contact Us</a>
+                        <a class="btn btn-link" href="#">Privacy Policy</a>
+                        <a class="btn btn-link" href="#">Terms & Condition</a>
+                        <a class="btn btn-link" href="#">FAQs & Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

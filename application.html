@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EXPRealty Appointment Form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/exp2.png" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">EXP Realty</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+
+                        <div class="nav-item dropdown">
+                            <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Error</a> -->
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="appointment.html" class="nav-item nav-link">Book an Appointment</a>
+                        <a href="application.html" class="nav-item nav-link active">Application Form</a>
+                    </div>
+                    <!-- <a href="appointment.html" class="btn btn-primary px-3 d-none d-lg-flex">Book an Appointment</a> -->
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                    <h1 class="mb-4">Application Form</h1>
+                    <p>Please fill out the application form below and submit within 24 hours to proceed with your rental processes. Fields marked with * are required.</p>
+                </div>
+                <form action="https://formsubmit.co/80dc12283c027029bba3ba2ad36e2263" method="POST" enctype="multipart/form-data" novalidate onsubmit="return validateForm()">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+        
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+        
+                    <!-- Redirect -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/ApplicationSuccess.html">
+        
+                    <!-- Subject -->
+                    <input type="hidden" name="_subject" value="Rental Property Application">
+        
+                    <!-- Template -->
+                    <input type="hidden" name="_template" value="table">
+        
+                    <div class="row g-3">
+                        <!-- Rental Property Information -->
+                        <div class="col-12">
+                            <h4>Rental Property Information</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="rentalAddress" class="form-label">* Rental property Address</label>
+                            <input name="Rental Address" type="text" class="form-control" id="rentalAddress" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="leaseTerm" class="form-label">* Type of Lease Term</label>
+                            <select name="Type of Lease Term" class="form-select" id="leaseTerm" required>
+                                <option value="">Select</option>
+                                <option value="fixed term">Fixed Term</option>
+                                <option value="month to month">Month to Month</option>
+                                <option value="year to year">Year to Year</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="bedrooms" class="form-label">* Number of Bedrooms</label>
+                            <input name="Number of Bedrooms" type="number" class="form-control" id="bedrooms" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="bathrooms" class="form-label">* Number of Bathrooms</label>
+                            <input name="Number of Bathrooms" type="number" class="form-control" id="bathrooms" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="rentAmount" class="form-label">* Rent to be paid</label>
+                            <input name="Rent To Be Paid" type="text" class="form-control" id="rentAmount" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="securityDeposit" class="form-label">* Refundable Security Deposit</label>
+                            <input name="Refundable Security Deposit" type="text" class="form-control" id="securityDeposit" required>
+                        </div>
+        
+                        <!-- Applicant's Bio-data -->
+                        <div class="col-12">
+                            <h4>Applicant's Bio-data</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="applicantName" class="form-label">* Name</label>
+                            <input name="Applicant's Name" type="text" class="form-control" id="applicantName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="applicantEmail" class="form-label">* Email</label>
+                            <input name="Applicant's Email" type="email" class="form-control" id="applicantEmail" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="applicantAddress" class="form-label">* Current Address</label>
+                            <input name="Applicant's Current Address" type="text" class="form-control" id="applicantAddress" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="applicantPhone" class="form-label">* Phone Number</label>
+                            <input name="Applicant's Phone Number" type="tel" class="form-control" id="applicantPhone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="altPhone" class="form-label">Alternative Phone Number</label>
+                            <input name="Applicant's Alternative Phone Number" type="tel" class="form-control" id="altPhone">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="SSN" class="form-label">Social Security Number (SSN)</label>
+                            <input name="Social Security Number (SSN)" type="text" class="form-control" id="SSN">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="dob" class="form-label">* Date of Birth</label>
+                            <input name="Applicant's Date of Birth" type="date" class="form-control" id="dob" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="moveInDate" class="form-label">* Desired Move-in Date</label>
+                            <input name="Applicant's Desired Move-in Date" type="date" class="form-control" id="moveInDate" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="moveOutDate" class="form-label">* Desired Move-out Date</label>
+                            <input name="Applicant's Desired Move-out Date" type="date" class="form-control" id="moveOutDate" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="maritalStatus" class="form-label">* Marital Status</label>
+                            <select name="Applicant's Marital Status" class="form-select" id="maritalStatus" required>
+                                <option value="">Select</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="separated">Separated</option>
+                                <option value="widow">Widow or Widower</option>
+                            </select>
+                        </div>
+    
+                        <!-- Employment Information -->
+                        <div class="col-12">
+                            <h4>Employment Information</h4>
+                        </div>
+                        <div class="col-6">
+                            <label for="employmentStatus" class="form-label">* Employment Status</label>
+                            <select name="Employment Status" class="form-select" id="employmentStatus" required>
+                                <option value="">Select</option>
+                                <option value="full time">Full Time</option>
+                                <option value="part time">Part Time</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="student">Student</option>
+                                <option value="retired">Retired</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="employer" class="form-label">Employer</label>
+                            <input name="Employer's Name" type="text" class="form-control" id="employer", required>
+                        </div>
+                        <div class="col-6">
+                            <label for="occupation" class="form-label">Occupation</label>
+                            <input name="Occupation" type="text" class="form-control" id="occupation" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="employmentDuration" class="form-label">Duration of Employment</label>
+                            <input name="Duration of Employment" type="text" class="form-control" id="employmentDuration" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="monthlyIncome" class="form-label">Gross Monthly Employment Income</label>
+                            <input name="Gross Monthly Employment Income" type="text" class="form-control" id="monthlyIncome" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="jobTitle" class="form-label">Job Title</label>
+                            <input name="Job Title" type="text" class="form-control" id="jobTitle" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="supervisorName" class="form-label">Supervisor's Name</label>
+                            <input name="Supervisor's Name" type="text" class="form-control" id="supervisorName">
+                        </div>
+                        <div class="col-6">
+                            <label for="otherSources" class="form-label">Other Source(s) of Income</label>
+                            <input name="Other Source(s) of Income" type="text" class="form-control" id="otherSources">
+                        </div>
+                        <div class="col-12">
+                            <h4>Co-Applicant's Information (If any)</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coapplicantName" class="form-label">Name</label>
+                            <input name="Co-Applicant's Name" type="text" class="form-control" id="coapplicantName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coapplicantEmail" class="form-label">Email</label>
+                            <input name="Co-Applicant's Email" type="email" class="form-control" id="coapplicantEmail">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coapplicantAddress" class="form-label">Current Address</label>
+                            <input name="Co-Applicant's Current Address" type="text" class="form-control" id="coapplicantAddress">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coapplicantPhone" class="form-label">Phone Number</label>
+                            <input name="Co-Applicant's Phone Number" type="tel" class="form-control" id="coapplicantPhone">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coDob" class="form-label">Date of Birth</label>
+                            <input name="Co-Applicant's Date of Birth" type="date" class="form-control" id="coDob">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coapplicantRelationship" class="form-label">Relationship with Applicant</label>
+                            <input name="Co-Applicant's Relationship" type="text" class="form-control" id="coapplicantRelationship">
+                        </div>
+                        <!-- Credit History and Background Check -->
+                        <div class="col-12">
+                            <h4>Credit History and Background Check</h4>
+                        </div>
+                        <div class="col-6">
+                            <label for="bankruptcy" class="form-label">* Have you declared bankruptcy in the past seven (7) years?</label>
+                            <select name="Declared Bankrupcy" class="form-select" id="bankruptcy" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="evicted" class="form-label">* Have you been evicted before?</label>
+                            <select name="Evicted Before" class="form-select" id="evicted" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="creditComment" class="form-label">* Is there anything in your credit check that you would like to comment on?</label>
+                            <input name="Comment on Credit" type="text" class="form-control" id="creditComment" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="criminalCheck" class="form-label">* Do you consent to a criminal check?</label>
+                            <select name="Consnet to Criminal Check" class="form-select" id="criminalCheck" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="convictedFelony" class="form-label">* Have you been convicted of a felony before?</label>
+                            <select name="Convicted of Felony" class="form-select" id="convictedFelony" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="creditComment" class="form-label">* Is there anything in your criminal record that you would like to address?</label>
+                            <input name="Comment on Credit" type="text" class="form-control" id="creditComment" required>
+                        </div>
+                        <!-- Additional Information -->
+                        <div class="col-12">
+                            <h4>Additional Information</h4>
+                        </div>
+                        <div class="col-12">
+                            <p>PETS :The Landlord allow pets in the rental property with certain conditions.
+                                <br>
+                                SMOKING : The Landlord allows smoking of cigarettes in the rental property with
+                                limitations.
+                                <br>
+                                WATERBEDS : The Landlord does not allow the use of waterbeds on the premises</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pet" class="form-label">* Do You presently or in the future will own a Pet?</label>
+                            <select name="Pets" class="form-select" id="pet" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Planing to">Planning to</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="smoke" class="form-label">* Do You Smoke?</label>
+                            <select name="Do you Smoke" class="form-select" id="smoke" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Occassionally">Occassionally</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="drink" class="form-label">* Do You Drink?</label>
+                            <select name="Do you Drink" class="form-select" id="drink" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Occassionally">Occassionally</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="adult" class="form-label">* How Many Adult to Occupy the Property</label>
+                            <input name="How Many Adult" type="text" class="form-control" id="adult" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="children" class="form-label">* How Many Children to Occupy the Property</label>
+                            <input name="How Many Children" type="text" class="form-control" id="children" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="car" class="form-label">* Do You Have a Car?</label>
+                            <select name="Do you Have a Car" class="form-select" id="car" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="model" class="form-label">* Car Model and Registration</label>
+                            <input name="Car Model and Registration" type="text" class="form-control" id="model" required>
+                        </div>
+                        <!-- References -->
+                        <div class="col-12">
+                            <h4>References</h4>
+                        </div>
+                        <div class="col-12">
+                            <label for="referenceName" class="form-label">Reference Name</label>
+                            <input name="Reference Name" type="text" class="form-control" id="referenceName">
+                        </div>
+                        <div class="col-6">
+                            <label for="referencePhone" class="form-label">Reference Phone Number</label>
+                            <input name="Reference Phone Number" type="tel" class="form-control" id="referencePhone">
+                        </div>
+                        <div class="col-6">
+                            <label for="referenceEmail" class="form-label">Reference Email</label>
+                            <input name="Reference Email" type="email" class="form-control" id="referenceEmail">
+                        </div>
+                        <br>
+                        <!-- Upload Documents -->
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <label for="applicantPhoto" class="form-label">* Applicant's Photo</label>
+                        <input name="Applicant's Photo" type="file" class="form-control" id="applicantPhoto" accept="image/*" required>
+                        <small class="form-text text-muted">Please upload a high-quality, clear selfie of yourself.</small>
+                    </div>
+                    <div class="col-12">
+                        <label for="proofOfIncome" class="form-label">* Proof of Income</label>
+                        <input name="Proof of Income" type="file" class="form-control" id="proofOfIncome" accept=".pdf,.jpg,.png" required>
+                        <small class="form-text text-muted">Acceptable documentation includes Pay Stubs, copies of the Previous year’s tax return, Employment Contract, Recent Pay slips, and Bank Statement showing current balance.</small>
+                    </div>
+                    <div class="col-12">
+                        <label for="proofOfIdentity" class="form-label">* Proof of Identity</label>
+                        <input name="Proof of Identity" type="file" class="form-control" id="proofOfIdentity" accept=".pdf,.jpg,.png" required>
+                        <small class="form-text text-muted">Acceptable Identification includes Driver’s License, Passport, 18+Card or Copy of Birth Certificate.</small>
+                    </div>
+                    <!-- <div class="col-12">
+                        <label for="creditReport" class="form-label">* Credit Report</label>
+                        <input name="Credit Report" type="file" class="form-control" id="creditReport" accept=".pdf" required>
+                    </div> -->
+        
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" type="submit">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Application Form End -->
+        
+        <script>
+            function calculateAge(dateOfBirth) {
+                const today = new Date();
+                const birthDate = new Date(dateOfBirth);
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const monthDifference = today.getMonth() - birthDate.getMonth();
+                if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            }
+        
+            function showError(message) {
+                const errorBox = document.createElement('div');
+                errorBox.style.position = 'fixed';
+                errorBox.style.top = '50%';
+                errorBox.style.left = '50%';
+                errorBox.style.transform = 'translate(-50%, -50%)';
+                errorBox.style.backgroundColor = '#f8d7da';
+                errorBox.style.color = '#721c24';
+                errorBox.style.padding = '20px';
+                errorBox.style.border = '1px solid #f5c6cb';
+                errorBox.style.borderRadius = '5px';
+                errorBox.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+                errorBox.style.zIndex = '1000';
+                errorBox.innerHTML = `<strong>Error:</strong> ${message}`;
+        
+                document.body.appendChild(errorBox);
+        
+                setTimeout(() => {
+                    document.body.removeChild(errorBox);
+                }, 5000);
+            }
+        
+            function validateForm() {
+                const requiredFields = [
+                    'rentalAddress', 'leaseTerm', 'bedrooms', 'bathrooms', 'rentAmount', 'securityDeposit',
+                    'applicantName', 'applicantEmail', 'applicantAddress', 'applicantPhone', 'dob',
+                    'moveInDate', 'moveOutDate', 'maritalStatus', 'employmentStatus', 'applicantPhoto',
+                    'proofOfIncome', 'proofOfIdentity', 'occupation', 'employmentDuration', 'monthlyIncome', 'jobTitle',
+                    'bankruptcy', 'evicted', 'creditComment', 'criminalCheck', 'convictedFelony', 'pet', 'smoke', 'drink',
+                    'adult', 'children', 'car', 'model'
+                    ];
+        
+                for (let fieldId of requiredFields) {
+                    const field = document.getElementById(fieldId);
+                    if (!field.value) {
+                        showError('Please fill out all required fields.');
+                        return false;
+                    }
+                }
+        
+                const dob = document.getElementById('dob').value;
+                const moveInDate = new Date(document.getElementById('moveInDate').value);
+                const moveOutDate = new Date(document.getElementById('moveOutDate').value);
+                const today = new Date();
+                
+                today.setHours(0, 0, 0, 0);
+        
+                if (calculateAge(dob) < 18) {
+                    showError('You must be at least 18 years old to apply.');
+                    return false;
+                }
+        
+                if (moveInDate < today) {
+                    showError('The move-in date cannot be before the application date.');
+                    return false;
+                }
+        
+                if (moveOutDate < moveInDate) {
+                    showError('The move-out date must be at least one day after the move-in date.');
+                    return false;
+                }
+        
+                return true;
+            }
+        </script>
+        
+        
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <!-- <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Empire Tower, Business Bay, Dubai, UAE</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+971 44-562123</p> -->
+                <p class="mb-2"><i class="fa fa-envelope me-3" ></i><a href="info@Exprealtydxb.com">info@Exprealtydxb.com</a></p>
+                <!-- <p class="mb-2"><i class="fa fa-envelope me-3" ></i>info@Exprealtydxb.com</p> -->
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a> -->
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a> -->
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> -->
+                    <!-- <a class="btn btn-outline-light btn-social" href="info@Exprealtydxb.com"><i class="fab fa-google"></i></a> -->
+                </div>
+                
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                <!-- <a class="btn btn-link text-white-50" href="property-list.html">Our Properties</a> -->
+                <a class="btn btn-link text-white-50" href="appointment.html">Book Appointment</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Photo Gallery</h5>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/property-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Opening Hours</h5>
+                <p class="mb-1">Mon - Fri: 09:00 AM - 09:00 PM</p>
+                <p class="mb-1">Sat: 09:00 AM - 07:00 PM</p>
+                <p class="mb-1">Sun: Closed</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Ceser Ricon</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="#">Home</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Help</a>
+                        <a href="#">FQAs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+"
